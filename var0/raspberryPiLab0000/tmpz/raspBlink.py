@@ -1,12 +1,15 @@
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
+pinOut = 12
+sleepTime = 2
+
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(13,GPIO.OUT)
+GPIO.setup(pinOut,GPIO.OUT)
 while True:
-  GPIO.output(13, True)
-  time.sleep(1)
-  GPIO.output(13, False)
-  time.sleep(1)
+  GPIO.output(pinOut, True)
+  time.sleep(sleepTime)
+  GPIO.output(pinOut, False)
+  time.sleep(sleepTime)
 
   
